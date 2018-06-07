@@ -15,7 +15,7 @@ f = open("record.txt",'a+')
 f.write('\n')
 while True:
 	time_=str(datetime.now())
-	print(time_ + ' ' + measure_temp())
+	#print(time_ + ' ' + measure_temp())
 	f.write(time_ + ' ' + measure_temp()+'\n')
 	f.flush()
         time.sleep(300)
