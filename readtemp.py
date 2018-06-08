@@ -8,8 +8,8 @@ from datetime import datetime
 def measure_temp():
         temp = os.popen("cat /sys/class/thermal/thermal_zone0/temp").readline()
 	temp = float(temp)/1000
-	tempC = str(temp)
-	tempF = str(temp*9/5+32)
+	tempC = str("{0:.1f}".format(temp))
+	tempF = str("{0:.1f}".format(temp*9/5+32))
         return ("Fahrenheit: " + tempF + " Celsius: " + tempC)
 
 def cpu_usage():
